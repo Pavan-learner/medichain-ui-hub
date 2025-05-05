@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -25,8 +29,32 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#0077B6',
+					foreground: '#ffffff',
+					50: '#E1F2FA',
+					100: '#B3E0FF',
+					200: '#80CCFF',
+					300: '#4DB8FF',
+					400: '#1AA7FF',
+					500: '#0077B6',
+					600: '#006199',
+					700: '#004B7C',
+					800: '#003659',
+					900: '#002033',
+				},
+				accent: {
+					DEFAULT: '#00B4D8',
+					foreground: '#ffffff',
+					50: '#E0F7FB',
+					100: '#B3EBF5',
+					200: '#80DEEF',
+					300: '#4DD0E9',
+					400: '#1AC2E3',
+					500: '#00B4D8',
+					600: '#0097B3',
+					700: '#007A8F',
+					800: '#005C6B',
+					900: '#003F47',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -39,10 +67,6 @@ export default {
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -84,12 +108,26 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+			},
+			boxShadow: {
+				'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
