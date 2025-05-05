@@ -38,7 +38,7 @@ const SettingsPage: React.FC = () => {
   };
   
   return (
-    <div className="animate-fade-in max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <div className="bg-white rounded-xl shadow-card p-6 mb-6">
         <h2 className="text-lg font-bold mb-6">System Settings</h2>
         

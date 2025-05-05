@@ -166,7 +166,7 @@ const BillingPage: React.FC = () => {
   }, []);
   
   return (
-    <div className="animate-fade-in">
+    <div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left column - Customer selection and medicine search */}
         <div className="lg:col-span-2">
